@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+{% block title %} 
+<title>新規作成</title>
+{% endblock %}
+
+{% block content %}
+<h1>新規作成</h1>
+<form method="POST">
+  <label for="title">タイトル</label>
+  <input type="text" name="title" >
+ 
+ <select input class="form-select" aria-label="Default select example"type="text" name="tag" >
+    <option selected>タグ</option>
+    <option >イベント1</option>
+    <option >イベント2</option>
+    <option >イベント3</option>
+  </select>
+
+  <label for="body">内容</label>
+  <input type="text" name="body">
+  <input type="submit" value="登録">
+</form>
+<a href="/">戻る</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} 
+<title>編集ページ</title>
+{% endblock %}
+{% block content %}
+<h1>編集</h1>
+<form method="POST">
+  <label for="title">タイトル</label>
+  <input type="text" name="title" value="{{ post.title }}">
+
+  <select input class="form-select" aria-label="Default select example"type="text" name="tag" value="{{ post.tag }}">
+    <option selected>タグ</option>
+    <option >イベント1</option>
+    <option >イベント2</option>
+    <option >イベント3</option>
+  </select>
+
+  <label for="body">内容</label>
+  <input type="text" name="body" value="{{ post.body }}">
+  <input type="submit" value="更新">
+</form>
+<a href="/">戻る</a>
+{% endblock %}
